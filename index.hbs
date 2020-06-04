@@ -1,0 +1,35 @@
+{{> header}}
+<div class="container">
+    <h1>Pintores</h1>
+{{#if Pintores }}
+<table class="table table-dark table-hover">
+
+<thead>
+    <tr>
+        <tr>ID</tr>
+                <tr>Nombre</tr>
+        <tr>Nacionalidad</tr>
+                <tr>Corriente</tr>
+                        <tr>Imagen</tr>
+
+
+
+    </tr>
+</thead>
+<tbody>
+    {{#each pintores}} {{/each}}
+    <tr>
+<td>{{-id}}</td>            
+    <td>{{Nombre}</td>
+       <td>{{Nacionalidad}}</td>
+            <td>{{Corriente}}</td>
+                       <td><img src="..images/" {{pintura}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+{{ else}}
+<div>No se encuentran pintores</div>
+{{/if}}
+</div>
+{{> footer}}
